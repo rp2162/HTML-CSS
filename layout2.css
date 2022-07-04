@@ -31,7 +31,7 @@
  }
  .c1{
     width: 65%; 
-    height: 300px;
+    height: 390px;
     padding: 25px;
     float: right;
     background-color: cyan;
@@ -42,7 +42,7 @@
     
 }
  .c2{
-    height: 300px;
+    height: 390px;
     width: 65%;
     float: left;
     padding: 25px;
@@ -55,7 +55,7 @@
      
  }
  .c3{
-    height: 300px;
+    height: 390px;
     width: 65%;
     float: left;
     padding: 25px;
