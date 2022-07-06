@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>image hover </title>
+    <style type="text/css">
+        .a
+        {
+            position:relative;
+            margin-top: 20px;
+			width: 300px;
+            margin: 0 auto;
+        }
+        .image
+        {
+            display: block;
+
+            height: 100%;
+            width: 100%;
+            transition: 1s;
+            margin: 0 auto;
+        }
+        .img
+        {
+            display: block;
+            height: 100%;
+            width: 100%;
+            transition: 1s;
+            margin: 0 auto;
+        }
+        .b
+        {
+            /* height: 100%; */
+            top: 0;
+            padding-top: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            transition: 1s;
+            opacity: 0;
+            background-color: black;
+        }
+        .a:hover .b{
+            opacity: 0.5;
+        }
+       
+        .a:hover .image{
+            transform: rotate(355deg);
+        }
+        .c
+        {
+            color: white;
+            font-size: 23px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+    </style>
+</head>
+<body style="text-align: center;">
+    <h2>IMAGE HOVER EFFECT</h2>
+    <div class="a">
+        <div class="image">
+            <img src="s.jpg" alt="Demo image" class="img">
+        </div>
+        <div class="b">
+            <div class="c">Deep Vaghasiya</div>
+        </div>
+    </div>
+    
+</body>
+</html>
