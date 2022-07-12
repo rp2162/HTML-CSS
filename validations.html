@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
 		<title>Validation Demo</title>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
@@ -83,6 +85,33 @@
 					}
 				});
 
+
+
+				$("#Pswd").blur(function(){
+					$("#PswdVal").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#PswdVal").html("(*) Password required..!!");
+					}
+					else{
+						if(!$(this).val().match($PasswordRegEx)){
+							$("#PswdVal").html("(*) Invalid Password..!!");
+						}
+					}
+				});
+
+				/*$("#Pswd").keypress(function(e){
+					$("#PswdVal").empty();
+					var Flag=((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=121));
+					if(Flag==false){
+						$("#PswdVal").html("Invalid Input..!!");
+					}
+					return Flag;
+				});*/
+
+
+
+
+
 				$("#TxtContactMsg").blur(function(){
 					$("#TxtContactMsgValidation").empty();
 					if($(this).val()=="" || $(this).val()==null){
@@ -95,7 +124,7 @@
 					}
 				});
 
-				var TxtNameFlag=false,TxtContactNoFlag=false,TxtEmailIdFlag=false,TxtContactMsgFlag=false;
+				var TxtNameFlag=false,TxtContactNoFlag=false,TxtEmailIdFlag=false,TxtContactMsgFlag=false;PswdFlag=false;
 
 				$("#BtnSubmit").click(function(){
 					$("#TxtNameValidation").empty();
@@ -140,6 +169,24 @@
 							TxtEmailIdFlag=true;
 						}
 					}
+
+					$("#PswdVal").empty();
+					if($("#Pswd").val()=="" || $("#Pswd").val()==null){
+						$("#PswdVal").html("(*) Password required..!!");
+						PswdFlag=false;
+					}
+					else{
+						if(!$("#Pswd").val().match($PasswordRegEx)){
+							$("#PswdVal").html("(*) Invalid Password..!!");
+							PswdFlag=false;
+						}
+						else{
+							PswdFlag=true;
+						}
+					}
+
+
+
 					$("#TxtContactMsgValidation").empty();
 					if($("#TxtContactMsg").val()=="" || $("#TxtContactMsg").val()==null){
 						$("#TxtContactMsgValidation").html("(*) Contact message required..!!");
@@ -154,7 +201,7 @@
 							TxtContactMsgFlag=true;
 						}
 					}
-					if(TxtNameFlag==true && TxtContactNoFlag==true && TxtEmailIdFlag==true && TxtContactMsgFlag==true){
+					if(TxtNameFlag==true && TxtContactNoFlag==true && TxtEmailIdFlag==true && TxtContactMsgFlag==true && PswdFlag==true){
 						$("input,textarea").val("");
 						alert("Form submitted successfully..!!");
 					}
@@ -180,8 +227,8 @@
 		<input type="text" id="TxtEmailId" placeholder="enter the email id here.." maxlength="50"/><br/>
 		<small id="TxtEmailIdValidation"></small>
 		<hr/>
-		<input type="text" id="Txtpass" placeholder="enter the email id here.." maxlength="12"/><br/>
-		<small id="Txtpassvalidation"></small>
+		<input type="password" id="Pswd" placeholder="Enter your Password" maxlength="12"/><br/>
+		<small id="PswdVal"></small>
 		<hr/>
 		<textarea rows="5" id="TxtContactMsg" placeholder="enter the contact msg here.." maxlength="300"></textarea><br/>
 		<small id="TxtContactMsgValidation"></small>	
