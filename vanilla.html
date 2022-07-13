@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+    <script src="Demo.js"></script>
+    <style>
+      body {
+        background-color: rgb(189, 92, 186);
+      }
+      #s1 {
+        background-color: rgb(7, 57, 150);
+        height: 400px;
+        width: 400px;
+      }
+      h1{
+        text-align: center;
+        padding:29px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-shadow: 8px 8px 10px  rgb(41, 33, 33);
+      }
+      input,button{
+        font-size: 20px;
+        background-color: antiquewhite;
+        margin-left: 20px;
+        transition: 0.5s;
+      }
+      .input,button:hover{
+        opacity: 1.8;
+        transform: scale(1.2);
+      }
+    </style>
+
+<!-------------------------- java script--------------------------- -->
+
+    <script>
+        function internalalert(){
+            alert("Valid Click");
+        }
+        function internalconfrim()
+          {
+            if(confirm("Are you sure.----.?")){
+                alert("Yes");
+            }
+            else{
+                alert("Nooo");
+            }
+          }
+
+          function internalprompt(){
+          var fname=prompt("Enter first name");
+          var lname=prompt("Enter last name");
+          var f1name=prompt("Enter Father's name");
+          alert(fname+" "+lname+" "+f1name);
+        }
+
+function bodycolorchange(){
+  document.body.style.backgroundColor="teal";
+}
+function divcolorchange(){
+  document.getElementById("s1").style.backgroundColor="orange";
+}
+function colorpicker(){
+  document.getElementById("colorpicker").style.backgroundColor=document.getElementById("colorPicker").value;
+    
+  }
+  function divcolorchang(){
+    
+    document.getElementById("s1").style.backgroundColor=document.getElementById("divcolorchange").value;
+    
+  }
+  </script>
+  </head>
+
+  <body id="colorpicker">
+    <div id="s1">
+      <h1>Hello Everyone
+      </h1>
+    </div>
+    <hr />
+    <!--------------------------- inline-------------------------- -->
+    <button type="Alert" onclick="alert('Hello I am alert')">
+      inline alert
+    </button>
+    <button type="confirm" onclick="confirm('Hello I am confirm')">
+      inline confirm
+    </button>
+    <button type="prompt" onclick="prompt('Hello I am Prompt')">
+      inline Prompt
+    </button>
+    <hr />
+    <!-- ---------------------- internal ---------------------------->
+    <input type="button" value="internal alert" onclick="internalalert()" />
+    <input type="button" value="internal confirm" onclick="internalconfrim()" />
+    <input type="button" value="internal prompt" onclick="internalprompt()" />
+    <hr/>
+    <!-- ----------------------------- external ------------------------------- -->
+    <input type="button" value="external alert" onclick="externalalert()" />
+    <input type="button" value="external confirm" onclick="externalconfrim()" />
+    <input type="button" value="external prompt" onclick="externalprompt()" />
+    <hr/>
+    <input type="button" value="change body color" onclick="bodycolorchange()">
+    <input type="button" value="change div color" onclick="divcolorchange()">
+    <hr/>
+    <input type="color"  onclick="colorpicker()" id="colorPicker">
+    <input type="color"  onclick="divcolorchang()" id="divcolorchange">
+
+  </body>
+</html>
