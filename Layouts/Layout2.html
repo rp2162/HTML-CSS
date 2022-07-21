@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout2</title>
+    <style>
+        .r1{
+            text-align:center;
+            width: 100%;
+            border:2px solid black;
+            background-color: darkslategray;
+            color: white;
+            margin-top: 5px;
+            height: 100px;
+            line-height: 100px;
+        }
+        .r2{
+            width: 100%;
+            border:2px solid black;
+            background-color: darkslategray;
+            color: white;
+            margin-top: 5px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .r3{
+            width: 100%;
+            border:2px solid black;
+            background-color: darkslategray;
+            color: white;
+            margin-top: 5px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #demo{
+            display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			height: 450px;
+			width: 516px;
+        }
+        .d1{
+            text-align: center;
+            width: 120%;
+			flex:  50 0 50px;
+			margin: 5px;
+			background-color: rgb(118, 6, 187);
+            vertical-align: middle;
+
+        }
+        .big{
+            flex-basis: 415px;
+        }
+        .footer{
+            color: white;
+            margin-top: 5px;
+            background-color: darkslategray;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="r1">LOGO</div>
+    <div class="r2">Navigation</div>
+    <div class="r3">Header</div>
+    <div id="demo">
+        <div class="d1 big">Sidebar</div>
+        <div class="d1">Body Area</div>
+        <div class="d1">Banner</div>
+    </div>
+    
+    
+    <div class="footer">Footer</div>
+</body>
+</html>
