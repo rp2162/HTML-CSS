@@ -1,5 +1,0 @@
-
-1) In javascript no datatype no return type to be specified.
-2) Data conversion is their.
-3) It can be only debug by means of console.
-4) DOM object manipulation can be done by JS.
